@@ -72,11 +72,11 @@ const Navbar = () => {
                   Random
                 </Link>
               </li>
-              <li>
+              {/* <li>
                 <Link href={"/GenerateImage/logo"} className="cursor-pointer">
                   Logo
                 </Link>
-              </li>
+              </li> */}
               <li>
                 <Link href={"/GenerateImage/anime"} className="cursor-pointer">
                   Anime
