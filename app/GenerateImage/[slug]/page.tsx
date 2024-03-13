@@ -7,7 +7,7 @@ import Image from "next/image";
 import { useParams } from "next/navigation";
 
 const GenerateImagePage = () => {
-  const { slug } = useParams();
+  const params = useParams<{ slug: string }>();
   //   console.log(slug);
 
   const [prompt, setPrompt] = useState("");
@@ -29,7 +29,7 @@ const GenerateImagePage = () => {
 
       let endpoint;
 
-      switch (slug) {
+      switch (params?.slug) {
         case "anime":
           endpoint = "/api/generate-anime-image";
         case "painting":
