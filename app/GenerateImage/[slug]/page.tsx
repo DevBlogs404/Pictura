@@ -31,11 +31,12 @@ const GenerateImagePage = () => {
 
       switch (params?.slug) {
         case "anime":
-          endpoint = "/api/generate-anime-image";
+          endpoint = "https://pictura-ten.vercel.app/api/generate-anime-image";
         case "painting":
-          endpoint = "/api/generate-painting-image";
+          endpoint =
+            "https://pictura-ten.vercel.app/api/generate-painting-image";
         default:
-          endpoint = "/api/generate-image";
+          endpoint = "https://pictura-ten.vercel.app/api/generate-image";
           break;
       }
       const response = await axios.post(endpoint, { prompt });
